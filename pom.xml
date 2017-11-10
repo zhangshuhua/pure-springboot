@@ -7,6 +7,13 @@
     <groupId>com.cetiti</groupId>
     <artifactId>pure-springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!--默认为jar,当打包为war的时候一定要写-->
+    <packaging>jar</packaging>
+
+    <properties>
+        <!--貌似默认是GBK-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <!--jar仓库-->
     <repositories>
@@ -45,6 +52,20 @@
                     <verbose>true</verbose>
                     <overwrite>true</overwrite>
                 </configuration>
+            </plugin>
+
+            <!--spring-boot项目打包要使用该插件-->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>1.5.8.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
