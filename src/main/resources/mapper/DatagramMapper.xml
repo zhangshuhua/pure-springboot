@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cetiti.mapper.DatagramMapper">
+  <resultMap id="BaseResultMap" type="com.cetiti.model.Datagram">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="deviceID" jdbcType="CHAR" property="deviceid" />
+    <result column="time_zone" jdbcType="SMALLINT" property="timeZone" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="divisionEW" jdbcType="CHAR" property="divisionew" />
+    <result column="longitude" jdbcType="DOUBLE" property="longitude" />
+    <result column="divisionNS" jdbcType="CHAR" property="divisionns" />
+    <result column="latitude" jdbcType="DOUBLE" property="latitude" />
+    <result column="direction" jdbcType="DOUBLE" property="direction" />
+    <result column="speed" jdbcType="DOUBLE" property="speed" />
+    <result column="satellites" jdbcType="INTEGER" property="satellites" />
+    <result column="precision_value" jdbcType="DOUBLE" property="precisionValue" />
+    <result column="height" jdbcType="DOUBLE" property="height" />
+    <result column="retrans_flag" jdbcType="CHAR" property="retransFlag" />
+    <result column="needs_response" jdbcType="CHAR" property="needsResponse" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+</mapper>
